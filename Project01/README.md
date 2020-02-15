@@ -57,7 +57,9 @@ Type-Count will find all files in the repo with the extension provided by the us
 
 **Execution:**
 For execution, run the script using:
-	`./CS1XA3/Project01/project_analyze.sh Type-Count'`
+
+`./CS1XA3/Project01/project_analyze.sh Type-Count'`
+
 Once prompted with `Enter extension type (No Punctuation)`, user will type file extension they are looking for. The format of the extension should be just the extension with no punctuation (i.e. "txt", "pdf", etc.). If the user input following the prompt does not follow this format or is a format that doesn't exist in repo, the output will result in 0.
 
 **Reference**: None used.
