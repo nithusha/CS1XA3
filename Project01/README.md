@@ -29,11 +29,11 @@ FIXME checks for all files in the repo that has "#FIXME" in the last line of the
 **Execution:** 
 To execute, we execute the script followed by FIXME.
 
-`./CS1XA3/Project01/project_analyze.sh FIXME'`
+`./CS1XA3/Project01/project_analyze.sh FIXME`
 
 Note that a fixme.log file will always be created even if nothing is found, however it will be an empty file.
 
-**Reference:** 
+**References:** 
  - [StackOverFlow](https://stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash)
 
 ## Feature 02: Checkout-Latest-Merge
@@ -44,11 +44,11 @@ Checkout-Latest-Merge searches through all the commits made in the repo and find
 **Execution:**
 For execution, similar to before, we execute with:
 
-`./CS1XA3/Project01/project_analyze.sh Checkout-Latest-Merge'`
+`./CS1XA3/Project01/project_analyze.sh Checkout-Latest-Merge`
 
 The output will either automatically switch you to the commit found or in the current working stage as before.
 
-**Reference:** None used.
+**References:** None used.
 
 ## Feature 03: Type-Count
 
@@ -58,11 +58,11 @@ Type-Count will find all files in the repo with the extension provided by the us
 **Execution:**
 For execution, run the script using:
 
-`./CS1XA3/Project01/project_analyze.sh Type-Count'`
+`./CS1XA3/Project01/project_analyze.sh Type-Count`
 
 Once prompted with `Enter extension type (No Punctuation)`, user will type file extension they are looking for. The format of the extension should be just the extension with no punctuation (i.e. "txt", "pdf", etc.). If the user input following the prompt does not follow this format or is a format that doesn't exist in repo, the output will result in 0.
 
-**Reference**: None used.
+**References**: None used.
 
 ## Custom Feature 01: File-Changes
 
@@ -78,11 +78,13 @@ If Tag is Modified:
 **Execution:** 
 Like other features' execution, the user will execute the code followed by argument `File-Changes`:
 
-`./CS1XA3/Project01/project_analyze.sh File-Changes'`  
+`./CS1XA3/Project01/project_analyze.sh File-Changes`  
 
 This feature will take on one of 2 user inputs when prompted for a `Tag` which can be either `Accessed` or `Modified`.                                                                  If user prompts Accessed or Modified:                                                                                                                                                  
  - User will then be prompted again for a `Date Range`. The user can then input `All` or `"MMM DD"` where MMM is first 3 letters of the month and DD is the day of month.               
  - User will again be prompted for a `Time Range`. The user can again input `All` or `HH:MM-HH:MM"` where HH:MM is using military time. 
+
+**References:**
 
 ## Custom Feature 02: Organize
 
@@ -111,4 +113,4 @@ If prompt chosen is "Directories", user will be asked:
  `Do you want to delete Dumb Directories?`
 User will give "YES" or "NO" as input. 
 
-**Reference:**	
+**References:**	
