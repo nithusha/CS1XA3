@@ -139,7 +139,7 @@ The user will be prompted with 2 options of `Files` or `Directories`
 If Files is prompted:
  - create a new directory CS1XA3/Project01/Important-$USER
  - copy all files in repo which has "important" in file name or within file contents into this directory
- - rename all remaining files with the name + "Not Needed"
+ - rename all remaining files with the "Not-Needed: 'oldfilename'"
 
 If Directories is prompted:
  - for all directories not called private, check all directory names for "Dumb" 
@@ -158,4 +158,4 @@ If prompt chosen is "Directories", user will be asked:
  `Do you want to delete Dumb Directories?`
 User will give "YES" or "NO" as input. 
 
-**References:**	
+**References:**	None Used

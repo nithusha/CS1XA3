@@ -143,7 +143,7 @@ for item in $@ ; do
 	if [ "$item" == "Organize" ]; then
 		echo "What do you want to organize? Files or Directories?"
 		read object
-		DIR="$(pwd}"
+		DIR="$(pwd)"
 		ParentDir="$(dirname $DIR)"
 		if [ "$object" == "Files" ]; then
 			if [ ! -d "Important-$USER" ]; then
@@ -155,15 +155,32 @@ for item in $@ ; do
 				mv "$file" "$DIR/Impotant-$USER"
 			done
 			find "$ParentDir" -type f -not -path '*/\.git/*' -print0 | while IFS= read -r -d '' file; do
-				if [ grep -q "Important" $file ]; then
+				if  grep -q "Important" $file; then
 					mv "$file" "$DIR/Important-$USER"
 				fi
 			done
 			for file in "$ParentDir"/*; do
-				filename=$(basename $file)
-				dirname=$(dirname $file)
-				mv "$file" "$dirname/Not-Needed: $filename"
+				filename=$(basename "$file")
+				dirname=$(dirname "$file")
+				mv "$file" "$dirname/Not-Needed:$filename"
 			done
+		fi
+		if [ "$object" == "Directories" ]; then
+			if [ ! -d "Trash" ]; then
+				mkdir "Trash"
+			elif [ -d "Trash" ]; then
+				find "Trash" ! -type d -exec rm -f {} +
+			fi
+			find "$ParentDir" -type d -name "Dumb" -and ! -name "private" -print0 | while IFS= read -r -d '' file; do
+				cp  "$file" "$DIR/Trash"
+			done
+			echo "Do you want to delete Dumb Directories?"
+			read answer
+			if [ "$answer" == "yes" ]; then
+				find "$ParentDir" -type d -name "Dumb" -and ! -name "private" -print0 | while IFS= read -r -d '' file; do
+					rm -r "$file"
+				done
+			fi
 		fi
 	fi
 done
