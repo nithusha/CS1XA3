@@ -64,6 +64,49 @@ Once prompted with `Enter extension type (No Punctuation)`, user will type file 
 
 **References**: None used.
 
+## Feature 04: File Size List
+
+**Description:**
+File Size List will go through all file in the repo and return the file name along with the file size in human readable format, ie. megabytes, kilobytes, etc.
+
+**Execution:**
+We execute with:
+
+'./CS1XA3/Project01/project_analyze.sh File-Size-List'
+
+The output will be all files and their sizes listed next to them.
+
+**References:** None used. 
+
+## Feature 05: Find Tag
+
+**Description:**
+Find Tag will prompt for a Tag word. It will then search through all files in the repo and look for the tag word. A file called Tag.log will be created in Project01 and the file name and all lines where the tag was found will be listed underneath the file name in the log.
+Note if tag is given but there are no files containing the tag word, a log will still be created but will have no contents in it.
+
+**Execution:**
+We excecute with 
+
+'./CS1XA3/Project01/project_analyze.sh Find-Tag'
+
+**References:** None used.
+
+## Feature 06: Backup-Delete/Restore
+**Description:** 
+Backup-Delete/Restore will have 2 possible prompts, either Backup or Restore. If Backup is prompted then an empty directory called backup will be created. If such a directoy already exists then it is emptied of its contents. Finding all files with .tmp extension, it copies these files into the backup directory deleting them from their original locations. Their original locations are logged into a filed called restore.log. If Restore is selected then all files are moved back into their original locations and the backup is emptied of it's contents. If Restore is the prompt but no restore.log file exists, an error message will be thrown back to the user.
+
+**Execution:**
+Execute with:
+'./CS1XA3/Project01/project_analyze.sh Backup-Delete/Restore'
+
+When prompted users will enter either:
+"Backup" or "Restore"
+
+**References:**
+[StackExchange](https://unix.stackexchange.com/questions/481152/remove-files-files-from-subdirectories-in-directory?rq=1)
+[AskUbuntu](askubuntu.com/questions/444551/get-absolute-path-of-files-using-find-command)
+
+
 ## Custom Feature 01: File-Changes
 
 **Description:** 
@@ -81,10 +124,12 @@ Like other features' execution, the user will execute the code followed by argum
 `./CS1XA3/Project01/project_analyze.sh File-Changes`  
 
 This feature will take on one of 2 user inputs when prompted for a `Tag` which can be either `Accessed` or `Modified`.                                                                  If user prompts Accessed or Modified:                                                                                                                                                  
- - User will then be prompted again for a `Date Range`. The user can then input `All` or `"MMM DD"` where MMM is first 3 letters of the month and DD is the day of month.               
+ - User will then be prompted again for a `Date Range`. The user can then input `All` or `"MM/DD/YYYY"` where MM is number of the month and DD is the day of month and YYYY is the year..               
  - User will again be prompted for a `Time Range`. The user can again input `All` or `HH:MM-HH:MM"` where HH:MM is using military time. 
 
 **References:**
+-[StackExchange](https://unix.stackexchange.com/questions/84381/how-to-compare-two-dates-in-a-shell)
+-[StackExchange](https://unix.stackexchange.com/questions/395933/how-to-check-if-the-current-time-is-between-2300-and-0630)
 
 ## Custom Feature 02: Organize
 
