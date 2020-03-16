@@ -25,18 +25,21 @@ and it again toggles between fading in the boxes or fading out the set of boxes.
 There are comments on the file, but this function now looks for the containers with a specific id name, that is unique to the animation I created. Specifically it goes through the document and finds the range of boxes I created at the bottom of the page. I set initiliazer speeds for both fading in and fading out. Based on if the container is visible or not it, either descends or ascends in speed through a for loop of all containers with the unique id name of "animation"
 
 **References:** 
-- The Html document used this template from [Themezy](https://www.themezy.com/)
-    -[Main Template](https://www.themezy.com/free-website-templates/151-ceevee-free-responsive-website-template)
+- The Html document used this template from [Themezy](https://www.themezy.com/):
+    [Main Template](https://www.themezy.com/free-website-templates/151-ceevee-free-responsive-website-template)
+    
     -The CSS and javascript files not mentioned as a custom code also primarily came from this download and were altered to suit my needs
 
-- The big constellation animation came from a template from [CodePen](https://codepen.io/)
-    -[Constellation](https://codepen.io/acauamontiel/pen/mJdnw)
+- The big constellation animation came from a template from [CodePen](https://codepen.io/):
+    [Constellation](https://codepen.io/acauamontiel/pen/mJdnw)
+    
     - JavaScript file named `Constellation.js` under the folder js is where the template is implemented.
 
 - Some code from this codepen animation was altered to fit the animation above. 
-    -[ConstellationAnimation](https://codepen.io/andrew_lee87/pen/jAvLav)
+    [ConstellationAnimation](https://codepen.io/andrew_lee87/pen/jAvLav)
 
-- The CSS code for the images is from a template from [w3schools]()
-    -[ResponsiveImageGrid](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive)
+- The CSS code for the images is from a template from [w3schools](https://www.w3schools.com/):
+    [ResponsiveImageGrid](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive)
+    
     -It can be found in `private/CS1XA3/Project02/CSS`
     under a file name in `Animation.css`
