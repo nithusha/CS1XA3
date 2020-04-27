@@ -31,6 +31,9 @@ class="close" title="Close Modal">&times;</span>
              <label for="password"><b>Password</b></label>
              <input type="password" placeholder="Enter Password" name="password" required> -->
             {{ login_form }}
+            {% if failed %}
+                    <p style="color:red">Incorrect Username or Password. Try again</p>
+            {% endif %}
         <button type="submit">Login</button>
     </div>
 

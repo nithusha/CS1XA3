@@ -1,7 +1,23 @@
 {% extends 'base.djhtml' %}
 
-{% block title %}Signup Page{% endblock %}
+{% block title %}SignUp Page{% endblock %}
 
 {% block middle_column %}
-    <!-- TODO Objective 1: implement signup form -->
+  <div class="w3-row-padding">
+        <div class="w3-card w3-round w3-white" style = "width: 575px; height = 1000px">
+                <div class="w3-container w3-padding">
+                      <form method="post" id="signup_form" action ="{% url 'login:create_view' %}">
+                      {% csrf_token %}
+                      {{ signup_form.as_table }}
+                      <input type="submit" value="Create Account"/>
+                      </form>
+
+                    {% if signup_failed %}
+                    <p style="color:red">Username or Password didn't meet requirements. Please try again.</p>
+                    {% endif %}
+                </div>
+            </div>
+       
+  </div>
+
 {% endblock %}
