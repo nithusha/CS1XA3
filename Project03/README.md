@@ -25,11 +25,12 @@ The login page has already been completed:
 - if authentication is successful, ie. user exists and correct credentials are put in, it redirects to /e/sibakumn/social/messages/ which is rendered by messages_view
 
 The signup page:
-- this feature is displayed in [signup.djhtml](https://github.com/nithusha/CS1XA3/tree/master/Project03) which is rendered by signup_view
+- this feature is displayed in [signup.djhtml](https://github.com/nithusha/CS1XA3/blob/master/Project03/login/templates/signup.djhtml) which is rendered by signup_view
 - signup.djhtml contains an empty `UserCreationForm()`
 - it makes a POST Request to /e/sibakumn/create/ which is handled by create_view
 - create_view creates a new user using the username and password provided from `UserCreationForm()`
 - if authentication is successful, satisfies conditions of the password, username isn't taken, etc., it redirects to /e/sibakumn/social/messages/ 
+
 
 **Exception:**
 - if /e/sibakumn/ is called without arguments, it redirects to login.djhtml
@@ -39,13 +40,13 @@ The signup page:
 ## Objective 02: Adding User Profile and Interests
 
 **Description:**
-- this feature is displayed in social_base.djhtml which renders messages.djhtml, people.djhtml and account.djhtml which is rendered by messages_view, people_view and account_view respectively
+- this feature is displayed in social_base.djhtml which renders [messages.djhtml](https://github.com/nithusha/CS1XA3/blob/master/Project03/social/templates/messages.djhtml), [people.djhtml](https://github.com/nithusha/CS1XA3/blob/master/Project03/social/templates/people.djhtml) and [account.djhtml](https://github.com/nithusha/CS1XA3/blob/master/Project03/social/templates/account.djhtml) which is rendered by messages_view, people_view and account_view respectively
 - for adding user profile and interests, social_base.djhtml is rendered by account_view and update_user_view
 
 ## Objective 03: Account Settings Page
 
 **Description:**
-- this feature is displayed in account.djhtml and updateuser.djhtml rendered by account_view and update_user_view
+- this feature is displayed in account.djhtml and [updateuser.djhtml](https://github.com/nithusha/CS1XA3/blob/master/Project03/social/templates/updateuser.djhtml) rendered by account_view and update_user_view
 - the ChangePassword button makes a POST Request to /e/sibakumn/social/account/ which is rendered by account_view
 - a modal which is rendered by account_view pops up and allows users to change their password using PasswordChangeForm()
 - the Update User Info button redirects to /e/sibakumn/social/userinfo/ which is rendered by update_user_view and displayed in updateuser.djhtml
