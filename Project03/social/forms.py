@@ -15,7 +15,7 @@ class UpdateUserInfoForm(UserChangeForm):
 
 class InterestForms(UserChangeForm):
     password = None
-    interests = forms.CharField(label = "Interests (Submit for each interest)", required=False)
+    interests = forms.CharField(label = "Interests", required=False)
     class Meta:
         model = UserInfo
         fields = ['interests']

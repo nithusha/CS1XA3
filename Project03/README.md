@@ -20,7 +20,7 @@ Password: 1234
 
 **Description:**
 The login page has already been completed:
-- this feature is displayed in [login.djhtml](https://github.com/nithusha/CS1XA3/tree/master/Project03) which is rendered by login_view
+- this feature is displayed in [login.djhtml](https://github.com/nithusha/CS1XA3/blob/master/Project03/login/templates/login.djhtml) which is rendered by login_view
 - it makes a POST Request to /e/sibakumn/ which is handled by login_view
 - if authentication is successful, ie. user exists and correct credentials are put in, it redirects to /e/sibakumn/social/messages/ which is rendered by messages_view
 
@@ -41,9 +41,9 @@ The signup page:
 **Description:**
 - this feature is displayed in social_base.djhtml which renders messages.djhtml, people.djhtml and account.djhtml which is rendered by messages_view, people_view and account_view respectively
 - for adding user profile and interests, social_base.djhtml is rendered by account_view and update_user_view
-**Exception:**
 
 ## Objective 03: Account Settings Page
+
 **Description:**
 - this feature is displayed in account.djhtml and updateuser.djhtml rendered by account_view and update_user_view
 - the ChangePassword button makes a POST Request to /e/sibakumn/social/account/ which is rendered by account_view
@@ -69,13 +69,14 @@ The signup page:
 
 **Exception:**
 - if user is not authenticated, then /e/sibakumn/social/people/ will redirect to login.djhtml
-- 
+
 ## Objective 05: Sending Friend Requests
 
 **Description:**
 - this feature is displayed in people.djhtml which is rendered by friend_request_view
 - it sends an AJAX POST Request from people.js to /e/sibakumn/social/friendrequest/ which is handled by friend_request_view
     - creates a FriendRequest object in the database and reloads on success
+
 **Exception:**
 - if user is not authenticated then /e/sibakumn/social/friend_request_view/ will redirect to login.djhtml
 
@@ -85,8 +86,8 @@ The signup page:
 - this feature is displayed in people.djhtml which is rendered by friend_request_view
 - the Accept/Decline buttons send an AJAX POST Request from people.js to /e/sibakumn/social/acceptdecline/ which is handled by accept_decline_view
     - the FriendRequest instance is deleted from the FriendRequest model
-    - if A was in the id sent to accept_decline_view, users are added to each other's friend list
-- 
+    - if A was in the id sent to accept_decline_view, users are added to each other's friend list 
+
 **Exception:**
 - if user is not authenticated then /e/sibakumn/social/accept_decling_view/ will redirect to login.djhtml
 
@@ -95,6 +96,7 @@ The signup page:
 **Description:**
 - this feature is displayed in messages.djhtml which is rendered by messages_view
     - to display all friends, messages.djhml iterates through all User objects in user's friend list
+
 **Exception:**
 - if user is not authenticated then /e/sibakumn/social/messages/ redirects to login.djhml
 
@@ -104,6 +106,7 @@ The signup page:
 - this feature is displayed in messages.djhtml which is rendered by messages_view
 - when post-button is clicked, it sends an AJAX POST Request from messages.js to /e/sibakumn/social/postsubmit/ which is handled by post_submit_view
     - post-submit-view gets post-content from messages.js and creates an instance of the Post model
+
 **Exception:**
 - if user is not authenticated, then /e/sibakumn/social/postsubmit/ redirects to login.djhtml
 
