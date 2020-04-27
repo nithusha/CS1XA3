@@ -52,7 +52,7 @@ The signup page:
 - it makes a POST Request to `/e/sibakumn/social/userinfo/` which is handled by `update_user_view` 
     - if request.POST == 'update', ie. when user clicks Update button, then it creates a `UpdateUserInfoForm()` which is a custom form in forms.py and updates UserInfo object as needed for employment, birthday and interest
     - if request.POST == 'interest', ie. when user clicks Add Interest button, then it creates a `InterestForms()` which is a custom form in [forms.py](https://github.com/nithusha/CS1XA3/blob/master/Project03/social/forms.py) and updates the class Interest and adds instance of this interest to the UserInfo object
-- it then redirects to `/e/sibakumn/social/account` displaying the updated info
+- it then redirects to `/e/sibakumn/social/account/` displaying the updated info
 
 **Exception:**
 - if birthday is not typed in the format as given, then no changes will be rendered, the Update button simply refreshes the page
